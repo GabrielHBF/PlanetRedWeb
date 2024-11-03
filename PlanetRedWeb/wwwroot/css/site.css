@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.imagens {
+    width : 45%;
+    background-color : green;
+}
+.displayImagens {
+    display: inline;
+    vertical-align : central;
+}
+.Caixa{
+   
+    margin : 2%;
+}
+
+.paragrafos {
+    width: 50%;
+    font: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+textarea{
+    resize :  none;
+    border-radius : 20px;
+    text-align : center;
+}
+ul{
+    list-style : none;
+}
+.BtnEntrar {
+   width : 50%;
+   border-radius:20px;
+   font-size : 1.2em;
+}
+.BtnCadastrar {
+    width: 70%;
+    border-radius: 20px;
+    font-size: 1.2em;
+}
+#login{
+    display : inline-block;
+    vertical-align : top;
+}
+#Cadastrar {
+    display: inline-block;
+}

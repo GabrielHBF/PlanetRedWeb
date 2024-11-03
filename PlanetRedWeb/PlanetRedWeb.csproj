@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\imagens\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\imagens\image5.jpg" />
+    <None Include="wwwroot\imagens\marte1.webp" />
+    <None Include="wwwroot\imagens\marte2.jpg" />
+    <None Include="wwwroot\imagens\marte3.jpg" />
+    <None Include="wwwroot\imagens\marte4.jpg" />
+    <None Include="wwwroot\imagens\marte6-1.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+  </ItemGroup>
+
+</Project>

@@ -64,3 +64,6 @@ ul{
 #Cadastrar {
     display: inline-block;
 }
+.text {
+    text-align : center;
+}

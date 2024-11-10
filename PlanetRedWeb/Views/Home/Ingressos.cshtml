@@ -3,37 +3,51 @@
 }
 
 <link href="~/css/site.css" rel="stylesheet" />
-<div class="text">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="~/css/Ingressos.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login" class="form-box">
+            <h1>Login</h1>
+            <ul>
+                <li>
+                    <input type="email" placeholder="E-mail" required>
+                </li>
+                <li>
+                    <input type="password" placeholder="Senha" required>
+                </li>
+                <li>
+                    <button class="btn-entrar">Entrar</button>
+                </li>
+            </ul>
+        </div>
 
-    <div id="login">
-        <ul>
-            <li>
-                <h1>Login</h1>
-                <textarea placeholder="E-mail"></textarea>
-            </li>
-            <li>
-                <textarea placeholder="Senha"></textarea>
-            </li>
-            <li><button class="BtnEntrar">Entrar</button></li>
-        </ul>
-    </div>
-    <div id="Cadastrar">
-        <ul>
+        <div id="cadastrar" class="form-box">
             <h1>Cadastrar</h1>
-            <li>
-                <textarea placeholder="Nome"></textarea>
-            </li>
-            <li>
-                <textarea placeholder="idade"></textarea>
-            </li>
-            <li>
-                <textarea placeholder="E-mail"></textarea>
-            </li>
-            <li>
-                <textarea placeholder="Senha"></textarea>
-            </li>
-            <li><button class="BtnCadastrar">Cadastrar</button></li>
-        </ul>
+            <ul>
+                <li>
+                    <input type="text" placeholder="Nome" required>
+                </li>
+                <li>
+                    <input type="number" placeholder="Idade" required>
+                </li>
+                <li>
+                    <input type="email" placeholder="E-mail" required>
+                </li>
+                <li>
+                    <input type="password" placeholder="Senha" required>
+                </li>
+                <li>
+                    <button class="btn-cadastrar">Cadastrar</button>
+                </li>
+            </ul>
+        </div>
     </div>
-
-</div>
+</body>
+</html>

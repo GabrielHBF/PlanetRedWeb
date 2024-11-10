@@ -1,0 +1,86 @@
+﻿
+@{
+	 ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Ingressos e Avaliação</title>
+    <link rel="stylesheet" href="~/css/logado.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Seção de Compra de Ingressos -->
+        <h1>Compra de Ingressos</h1>
+        <form action="/Compra/FinalizarCompra" method="post">
+            <div class="compra-section">
+                <div class="ticket-option">
+                    <label for="cheia">Ingresso Cheio (R$ 50)</label>
+                    <input type="number" id="cheia" name="cheia" value="0" min="0" onchange="updateTotal()">
+                </div>
+
+                <div class="ticket-option">
+                    <label for="meia">Ingresso Meia (R$ 25)</label>
+                    <input type="number" id="meia" name="meia" value="0" min="0" onchange="updateTotal()">
+                </div>
+
+                <div class="ticket-option">
+                    <label for="isento">Ingresso Isento (R$ 0)</label>
+                    <input type="number" id="isento" name="isento" value="0" min="0" onchange="updateTotal()">
+                </div>
+
+                <div class="total">
+                    Total: R$ <span id="totalAmount">0</span>,00
+                </div>
+            </div>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+
+        <!-- Seção de Avaliação de Satisfação -->
+        <h2>Avaliação de Satisfação</h2>
+        <form action="/Avaliacao/EnviarAvaliacao" method="post">
+            <div class="avaliacao-section">
+                <div class="rating">
+                    <p>1. Como você avalia o atendimento na recepção?</p>
+                    <input type="number" name="satisfacao1" min="1" max="5" required>
+
+                    <p>2. Como você avalia a organização das exposições?</p>
+                    <input type="number" name="satisfacao2" min="1" max="5" required>
+
+                    <p>3. Qual sua satisfação com a variedade de obras expostas?</p>
+                    <input type="number" name="satisfacao3" min="1" max="5" required>
+
+                    <p>4. Como você avalia a qualidade das obras expostas?</p>
+                    <input type="number" name="satisfacao4" min="1" max="5" required>
+
+                    <p>5. Como você avalia o ambiente do museu?</p>
+                    <input type="number" name="satisfacao5" min="1" max="5" required>
+                </div>
+            </div>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+    </div>
+
+    <script>
+        function updateTotal() {
+            const cheiaPrice = 50;
+            const meiaPrice = 25;
+            const isentoPrice = 0;
+
+            const cheiaQty = parseInt(document.getElementById("cheia").value) || 0;
+            const meiaQty = parseInt(document.getElementById("meia").value) || 0;
+            const isentoQty = parseInt(document.getElementById("isento").value) || 0;
+
+            const total = (cheiaQty * cheiaPrice) + (meiaQty * meiaPrice) + (isentoQty * isentoPrice);
+
+            document.getElementById("totalAmount").innerText = total;
+        }
+    </script>
+
+</body>
+</html>
